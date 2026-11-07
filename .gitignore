@@ -1,0 +1,17 @@
+# Environment & OS
+.env
+.env.local
+*.env
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Blender temporary files
+*.blend1
+*.blend2
+*.blend@
+
+# Temporary rendering cache work directories
+shorts_final/_work/
+renders_shorts_9x16/preview/
