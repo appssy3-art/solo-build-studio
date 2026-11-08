@@ -15,3 +15,9 @@ Thumbs.db
 # Temporary rendering cache work directories
 shorts_final/_work/
 renders_shorts_9x16/preview/
+scratch/**/*.png
+scratch/*.png
+scratch/seasonal_tests*/
+scratch/test_stair_fix/
+qa_540p_*.png
+seasons_preview/
