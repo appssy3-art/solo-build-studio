@@ -26,9 +26,9 @@
             surface: {
               base: '#0b0c0e',
               card: '#131518',
-              cardHover: '#181b1f',
+              cardHover: '#17191d',
               border: 'rgba(255, 255, 255, 0.08)',
-              borderHover: 'rgba(255, 255, 255, 0.22)'
+              borderHover: 'rgba(255, 255, 255, 0.20)'
             }
           }
         }
@@ -52,12 +52,13 @@
     .craft-card {
       background-color: #131518;
       border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+      transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
     }
     .craft-card:hover {
-      background-color: #181b1f;
-      border-color: rgba(255, 255, 255, 0.24);
+      background-color: #171a1e;
+      border-color: rgba(255, 255, 255, 0.22);
       transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
     }
     @keyframes toastFade {
       from { transform: translate(-50%, 16px); opacity: 0; }
@@ -73,7 +74,7 @@
   <!-- Container -->
   <main class="max-w-xl mx-auto px-4 pt-6 sm:pt-10">
 
-    <!-- 1. HERO ARCHITECTURAL BANNER (ACTUAL BLENDER 3D SEASONS VIDEO - AUTOPLAY CONTINUOUS LOOP) -->
+    <!-- 1. HERO ARCHITECTURAL BANNER (BLENDER 3D CONTINUOUS SEASONS VIDEO) -->
     <div class="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-white/[0.08] shadow-2xl bg-zinc-950">
       
       <!-- 3D Studio Visual Area (Real Blender Rendered Video Autoplay) -->
@@ -95,25 +96,25 @@
         <!-- Subtle Gradient Scrim at Bottom for clean integration -->
         <div class="absolute inset-0 bg-gradient-to-t from-[#131518] via-transparent to-black/35 pointer-events-none"></div>
 
-        <!-- Top Status Bar Overlay -->
+        <!-- Top Status Bar Overlay (Clean, Minimal, Zero Emojis) -->
         <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
           <!-- Real-time Scene Badge synced to video time -->
-          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-200 shadow-lg">
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-200 shadow-lg">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span id="season-label" class="transition-all duration-300">🌸 봄 · 벚꽃 아침</span>
+            <span id="season-label" class="tracking-wide uppercase text-[11px] font-medium text-zinc-300">봄 · 아침</span>
           </div>
 
           <!-- Studio Indicator -->
-          <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[11px] font-mono text-zinc-300">
+          <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/10 text-[11px] font-mono text-zinc-300">
             <i data-lucide="video" class="w-3.5 h-3.5 text-zinc-400"></i>
-            <span>3D BLENDER LIVE</span>
+            <span class="tracking-wider text-[10px]">3D STUDIO LIVE</span>
           </div>
         </div>
 
-        <!-- Subtle Minimal Cinematic Progress Dots at bottom (Synced with video playback) -->
+        <!-- Subtle Minimal Progress Line at bottom -->
         <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between pointer-events-none z-10">
           <div class="flex items-center gap-1.5">
             <div id="dot-0" class="h-1 rounded-full bg-white transition-all duration-500 w-6"></div>
@@ -121,7 +122,7 @@
             <div id="dot-2" class="h-1 rounded-full bg-white/25 transition-all duration-500 w-2"></div>
             <div id="dot-3" class="h-1 rounded-full bg-white/25 transition-all duration-500 w-2"></div>
           </div>
-          <span class="text-[10px] font-mono text-zinc-400 tracking-wider">CONTINUOUS LOOP</span>
+          <span class="text-[10px] font-mono text-zinc-400 tracking-wider">SEASON LOOP</span>
         </div>
       </div>
 
@@ -185,7 +186,7 @@
     </div>
 
 
-    <!-- 3. BENTO GRID OF 4 PRODUCTS (WITH ACTUAL APP ICONS) -->
+    <!-- 3. BENTO GRID OF 4 PRODUCTS (WITH AMBIENT BACKLIGHT LOGO HIGHLIGHTS) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
 
       <!-- PROJECT 1: 사이버펑크 3D 게임 (Featured Full Width Card) -->
@@ -197,9 +198,14 @@
       >
         <div class="flex items-start justify-between gap-4">
           <div class="flex items-start gap-3.5">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-900/60 to-indigo-900/60 border border-purple-500/30 text-amber-400 flex items-center justify-center shrink-0 group-hover:border-purple-400/50 transition">
-              <i data-lucide="gamepad-2" class="w-6 h-6 text-fuchsia-400"></i>
+            <!-- Logo with Ambient Fuchsia Backlight Glow -->
+            <div class="relative shrink-0">
+              <div class="absolute -inset-1 rounded-2xl bg-fuchsia-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
+              <div class="relative w-12 h-12 rounded-xl bg-gradient-to-br from-fuchsia-950/80 to-purple-950/80 border border-fuchsia-500/30 flex items-center justify-center shrink-0 group-hover:border-fuchsia-400/60 transition shadow-inner">
+                <i data-lucide="gamepad-2" class="w-6 h-6 text-fuchsia-400 group-hover:scale-105 transition-transform"></i>
+              </div>
             </div>
+
             <div>
               <div class="flex items-center gap-2">
                 <span class="font-mono text-[10px] tracking-wide uppercase px-2 py-0.5 rounded bg-fuchsia-950/40 text-fuchsia-300/90 border border-fuchsia-500/20">
@@ -230,7 +236,7 @@
       </a>
 
 
-      <!-- PROJECT 2: 클린견적 (Real Logo Applied) -->
+      <!-- PROJECT 2: 클린견적 (Pure Navy Star Squircle with Deep Sky Glow) -->
       <a 
         href="https://starcatcher.today" 
         target="_blank" 
@@ -239,10 +245,14 @@
       >
         <div>
           <div class="flex items-start justify-between gap-3">
-            <!-- Actual Cropped Logo from User's Image -->
-            <div class="w-11 h-11 rounded-xl overflow-hidden border border-white/[0.10] shrink-0 bg-[#0f2338]">
-              <img src="images/icon_cleanquote.png" alt="클린견적 로고" class="w-full h-full object-cover" />
+            <!-- Logo with Ambient Sky Blue Backlight Glow -->
+            <div class="relative shrink-0">
+              <div class="absolute -inset-1 rounded-2xl bg-sky-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
+              <div class="relative w-11 h-11 rounded-xl overflow-hidden border border-white/10 shrink-0 group-hover:border-sky-400/50 transition shadow-lg">
+                <img src="images/icon_cleanquote.png" alt="클린견적 로고" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
             </div>
+
             <div class="w-7 h-7 rounded-lg bg-white/[0.04] group-hover:bg-white/[0.12] text-zinc-400 group-hover:text-white flex items-center justify-center transition">
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </div>
@@ -268,7 +278,7 @@
       </a>
 
 
-      <!-- PROJECT 3: 사운드커버 (Real Purple Icon from User's Image) -->
+      <!-- PROJECT 3: 사운드커버 (Clean Purple Squircle with Violet Glow) -->
       <a 
         href="https://soundcover.shop" 
         target="_blank" 
@@ -277,10 +287,14 @@
       >
         <div>
           <div class="flex items-start justify-between gap-3">
-            <!-- Actual Cropped Icon from User's Image -->
-            <div class="w-11 h-11 rounded-xl overflow-hidden border border-white/[0.10] shrink-0 bg-[#5d2b7d]">
-              <img src="images/icon_soundcover.png" alt="사운드커버 아이콘" class="w-full h-full object-cover" />
+            <!-- Logo with Ambient Violet Backlight Glow -->
+            <div class="relative shrink-0">
+              <div class="absolute -inset-1 rounded-2xl bg-purple-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
+              <div class="relative w-11 h-11 rounded-xl overflow-hidden border border-white/10 shrink-0 group-hover:border-purple-400/50 transition shadow-lg">
+                <img src="images/icon_soundcover.png" alt="사운드커버 아이콘" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
             </div>
+
             <div class="w-7 h-7 rounded-lg bg-white/[0.04] group-hover:bg-white/[0.12] text-zinc-400 group-hover:text-white flex items-center justify-center transition">
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </div>
@@ -306,7 +320,7 @@
       </a>
 
 
-      <!-- PROJECT 4: 말랑이 D-Day (Real Slime Icon from User's Image) -->
+      <!-- PROJECT 4: 말랑이 D-Day (Clean Slime Mascot with Emerald/Mint Glow) -->
       <a 
         href="https://slime-countdown.netlify.app/" 
         target="_blank" 
@@ -315,10 +329,14 @@
       >
         <div class="flex items-start justify-between gap-4">
           <div class="flex items-start gap-3.5">
-            <!-- Actual Cropped Icon from User's Image -->
-            <div class="w-12 h-12 rounded-xl overflow-hidden border border-white/[0.10] shrink-0 bg-white shadow-sm">
-              <img src="images/icon_malang_dday.png" alt="말랑이 D-Day 아이콘" class="w-full h-full object-cover" />
+            <!-- Logo with Ambient Mint/Emerald Backlight Glow -->
+            <div class="relative shrink-0">
+              <div class="absolute -inset-1 rounded-2xl bg-emerald-400/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
+              <div class="relative w-12 h-12 rounded-xl overflow-hidden border border-white/10 shrink-0 group-hover:border-emerald-400/50 transition shadow-lg">
+                <img src="images/icon_malang_dday.png" alt="말랑이 D-Day 아이콘" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
             </div>
+
             <div>
               <div class="flex items-center gap-2">
                 <span class="font-mono text-[10px] tracking-wide uppercase px-2 py-0.5 rounded bg-emerald-950/40 text-emerald-300/90 border border-emerald-500/20">
@@ -369,7 +387,7 @@
   <script>
     lucide.createIcons();
 
-    // Actual Blender 3D Video Player & Dynamic Status Sync
+    // Actual Blender 3D Video Player & Dynamic Status Sync (Zero Emojis, Pure Minimal Typo)
     const video = document.getElementById('hero-video');
     const label = document.getElementById('season-label');
     const dots = [
@@ -392,17 +410,17 @@
     if (video) {
       video.addEventListener('timeupdate', () => {
         const t = video.currentTime;
-        let newLabel = '🌸 봄 · 벚꽃 아침';
+        let newLabel = '봄 · 아침';
         let activeIdx = 0;
 
         if (t >= 9.5 && t < 17.5) {
-          newLabel = '🌊 여름 · 청록빛 한낮';
+          newLabel = '여름 · 낮';
           activeIdx = 1;
         } else if (t >= 17.5 && t < 25.5) {
-          newLabel = '🍂 가을 · 단풍 노을';
+          newLabel = '가을 · 노을';
           activeIdx = 2;
         } else if (t >= 25.5) {
-          newLabel = '❄️ 겨울 · 설경 & 벽난로';
+          newLabel = '겨울 · 밤';
           activeIdx = 3;
         }
 
@@ -411,15 +429,13 @@
           setTimeout(() => {
             label.innerText = newLabel;
             label.style.opacity = '1';
-          }, 200);
+          }, 150);
           updateActiveDot(activeIdx);
         }
       });
 
       // Ensure autoplay kicks in on mobile/desktop
-      video.play().catch(() => {
-        // Autoplay policy fallback: muted already handled
-      });
+      video.play().catch(() => {});
     }
 
     // Email Copy
