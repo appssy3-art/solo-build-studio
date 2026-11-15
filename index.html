@@ -150,7 +150,7 @@
             <div id="dot-2" class="h-1 rounded-full bg-white/25 transition-all duration-500 w-2"></div>
             <div id="dot-3" class="h-1 rounded-full bg-white/25 transition-all duration-500 w-2"></div>
           </div>
-          <span class="text-[9px] sm:text-[10px] font-mono text-zinc-400 tracking-wider">3D STUDIO LIVE</span>
+          <span class="text-[9px] sm:text-[10px] font-mono text-zinc-400 tracking-wider">3D STUDIO</span>
         </div>
       </div>
 
@@ -236,18 +236,18 @@
     </div>
 
 
-    <!-- 3. BENTO GRID OF 4 PRODUCTS (CHRONOLOGICAL ORDER: MOST RECENT FIRST) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
+    <!-- 3. LIST OF 4 PRODUCTS (1 BLOCK EACH, CHRONOLOGICAL ORDER) -->
+    <div class="space-y-3 sm:space-y-3.5">
 
-      <!-- PROJECT 1 (최신 1위): 사이버펑크 3D 게임 (Featured Full Width Card) -->
+      <!-- PROJECT 1 (최신 1위): 사이버펑크 3D 게임 (Full Width Card) -->
       <a 
         href="https://vocal-creponne-a5944b.netlify.app" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="craft-card sm:col-span-2 group rounded-2xl p-4 sm:p-5 relative overflow-hidden"
+        class="craft-card w-full group rounded-2xl p-4 sm:p-5 relative overflow-hidden block"
       >
         <div class="flex items-start justify-between gap-3">
-          <div class="flex items-start gap-3 min-w-0">
+          <div class="flex items-start gap-3.5 min-w-0">
             <!-- Logo with Ambient Fuchsia Backlight Glow -->
             <div class="relative shrink-0">
               <div class="absolute -inset-1 rounded-2xl bg-fuchsia-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
@@ -288,15 +288,15 @@
       </a>
 
 
-      <!-- PROJECT 2 (최근 2위): 말랑이 D-Day (Featured Full Width Card) -->
+      <!-- PROJECT 2 (최근 2위): 말랑이 D-Day (Full Width Card) -->
       <a 
         href="https://slime-countdown.netlify.app/" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="craft-card sm:col-span-2 group rounded-2xl p-4 sm:p-5 relative overflow-hidden"
+        class="craft-card w-full group rounded-2xl p-4 sm:p-5 relative overflow-hidden block"
       >
         <div class="flex items-start justify-between gap-3">
-          <div class="flex items-start gap-3 min-w-0">
+          <div class="flex items-start gap-3.5 min-w-0">
             <!-- Logo with Ambient Mint/Emerald Backlight Glow -->
             <div class="relative shrink-0">
               <div class="absolute -inset-1 rounded-2xl bg-emerald-400/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
@@ -338,86 +338,94 @@
       </a>
 
 
-      <!-- PROJECT 3 (3위): 사운드커버 (Razor-Sharp Vector Icon - 100% Crisp) -->
+      <!-- PROJECT 3 (3위): 사운드커버 (Full Width Card) -->
       <a 
         href="https://soundcover.shop" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="craft-card group rounded-2xl p-4 sm:p-5 flex flex-col justify-between"
+        class="craft-card w-full group rounded-2xl p-4 sm:p-5 relative overflow-hidden block"
       >
-        <div>
-          <div class="flex items-start justify-between gap-3">
+        <div class="flex items-start justify-between gap-3">
+          <div class="flex items-start gap-3.5 min-w-0">
             <!-- Logo with Ambient Violet Backlight Glow -->
             <div class="relative shrink-0">
               <div class="absolute -inset-1 rounded-2xl bg-purple-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-200 shadow-lg">
+              <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-200 shadow-lg border border-purple-500/30">
                 <img src="images/icon_soundcover.svg" alt="사운드커버 아이콘" class="w-full h-full object-cover" />
               </div>
             </div>
 
-            <div class="w-7 h-7 rounded-lg bg-white/[0.04] group-hover:bg-white/[0.12] text-zinc-400 group-hover:text-white flex items-center justify-center transition shrink-0">
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span class="font-mono text-[10px] tracking-wide uppercase px-2 py-0.5 rounded bg-purple-950/40 text-purple-300/90 border border-purple-500/20 whitespace-nowrap">
+                  Privacy Utility
+                </span>
+              </div>
+              <h3 class="text-sm sm:text-base font-semibold text-white group-hover:text-purple-200 transition-colors mt-1 truncate">
+                사운드커버
+              </h3>
+              <p class="text-xs text-zinc-400 mt-1 leading-relaxed break-keep">
+                화장실 및 공공장소 사생활 보호 에티켓 사운드 앱
+              </p>
             </div>
           </div>
 
-          <div class="mt-3">
-            <span class="font-mono text-[10px] tracking-wide uppercase px-1.5 py-0.5 rounded bg-purple-950/40 text-purple-300/90 border border-purple-500/20 whitespace-nowrap">
-              Privacy Utility
-            </span>
-            <h3 class="text-sm sm:text-base font-semibold text-white group-hover:text-purple-200 transition-colors mt-1.5">
-              사운드커버
-            </h3>
-            <p class="text-xs text-zinc-400 mt-1 leading-relaxed break-keep">
-              화장실 및 공공장소 사생활 보호 에티켓 사운드 앱
-            </p>
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/[0.04] group-hover:bg-white/[0.12] text-zinc-400 group-hover:text-white flex items-center justify-center transition shrink-0">
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
           </div>
         </div>
 
         <div class="mt-3.5 pt-2.5 border-t border-white/[0.05] flex items-center justify-between text-[11px] font-mono text-zinc-500">
           <span>soundcover.shop</span>
-          <span class="text-zinc-400 group-hover:text-white transition">사용하기 →</span>
+          <span class="text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 transition-all">
+            사용하기 →
+          </span>
         </div>
       </a>
 
 
-      <!-- PROJECT 4 (4위): 클린견적 (Pure Crisp Vector Star Logo - No Outer Border) -->
+      <!-- PROJECT 4 (4위): 클린견적 (Full Width Card) -->
       <a 
         href="https://starcatcher.today" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="craft-card group rounded-2xl p-4 sm:p-5 flex flex-col justify-between"
+        class="craft-card w-full group rounded-2xl p-4 sm:p-5 relative overflow-hidden block"
       >
-        <div>
-          <div class="flex items-start justify-between gap-3">
+        <div class="flex items-start justify-between gap-3">
+          <div class="flex items-start gap-3.5 min-w-0">
             <!-- Logo with Ambient Sky Blue Backlight Glow -->
             <div class="relative shrink-0">
               <div class="absolute -inset-1 rounded-2xl bg-sky-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-200 shadow-lg">
+              <div class="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-200 shadow-lg border border-sky-500/30">
                 <img src="images/icon_cleanquote.svg" alt="클린견적 로고" class="w-full h-full object-cover" />
               </div>
             </div>
 
-            <div class="w-7 h-7 rounded-lg bg-white/[0.04] group-hover:bg-white/[0.12] text-zinc-400 group-hover:text-white flex items-center justify-center transition shrink-0">
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span class="font-mono text-[10px] tracking-wide uppercase px-2 py-0.5 rounded bg-blue-950/40 text-blue-300/90 border border-blue-500/20 whitespace-nowrap">
+                  Web Service
+                </span>
+              </div>
+              <h3 class="text-sm sm:text-base font-semibold text-white group-hover:text-blue-200 transition-colors mt-1 truncate">
+                클린견적
+              </h3>
+              <p class="text-xs text-zinc-400 mt-1 leading-relaxed break-keep">
+                홈페이지 제작 견적 산출 및 포트폴리오 샘플 보기
+              </p>
             </div>
           </div>
 
-          <div class="mt-3">
-            <span class="font-mono text-[10px] tracking-wide uppercase px-1.5 py-0.5 rounded bg-blue-950/40 text-blue-300/90 border border-blue-500/20 whitespace-nowrap">
-              Web Service
-            </span>
-            <h3 class="text-sm sm:text-base font-semibold text-white group-hover:text-blue-200 transition-colors mt-1.5">
-              클린견적
-            </h3>
-            <p class="text-xs text-zinc-400 mt-1 leading-relaxed break-keep">
-              홈페이지 제작 견적 산출 및 포트폴리오 샘플 보기
-            </p>
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/[0.04] group-hover:bg-white/[0.12] text-zinc-400 group-hover:text-white flex items-center justify-center transition shrink-0">
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
           </div>
         </div>
 
         <div class="mt-3.5 pt-2.5 border-t border-white/[0.05] flex items-center justify-between text-[11px] font-mono text-zinc-500">
           <span>starcatcher.today</span>
-          <span class="text-zinc-400 group-hover:text-white transition">둘러보기 →</span>
+          <span class="text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 transition-all">
+            둘러보기 →
+          </span>
         </div>
       </a>
 
