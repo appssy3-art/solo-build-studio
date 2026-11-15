@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="scGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#672d8a"/>
+      <stop offset="100%" stop-color="#471a63"/>
+    </linearGradient>
+  </defs>
+  <!-- Squircle Base -->
+  <rect width="100" height="100" rx="28" fill="url(#scGrad)"/>
+  <rect x="1" y="1" width="98" height="98" rx="27" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  
+  <!-- White Toilet Silhouette -->
+  <g fill="none" stroke="#ffffff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Water Tank (Left) -->
+    <rect x="29" y="32" width="13" height="28" rx="3.5"/>
+    <!-- Toilet Seat & Bowl -->
+    <path d="M42 45 h27 c0 13 -9 19 -18 19 s-15 -6 -15 -19"/>
+    <!-- Pedestal Base -->
+    <path d="M45 64 l-3 14 h18 l-3 -14"/>
+    <!-- Foot Plate -->
+    <path d="M38 78 h26"/>
+  </g>
+
+  <!-- Golden Mute Speaker Icon (Top Right) -->
+  <g fill="none" stroke="#fbbf24" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Speaker Body -->
+    <path d="M68 37 h3 l5 -5 v14 l-5 -5 h-3 z" fill="#fbbf24" stroke="none"/>
+    <!-- Slash across speaker -->
+    <path d="M65 25 l18 18"/>
+  </g>
+</svg>

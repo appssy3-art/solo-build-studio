@@ -71,6 +71,9 @@
 </head>
 <body class="arch-grid-bg min-h-screen antialiased selection:bg-zinc-700 selection:text-white pb-20">
 
+  <!-- Ambient Audio Track (Calm Lo-Fi / Acoustic Piano) -->
+  <audio id="bgm" src="audio_ambient.mp3" loop preload="auto"></audio>
+
   <!-- Container -->
   <main class="max-w-xl mx-auto px-4 pt-6 sm:pt-10">
 
@@ -97,9 +100,9 @@
         <div class="absolute inset-0 bg-gradient-to-t from-[#131518] via-transparent to-black/35 pointer-events-none"></div>
 
         <!-- Top Status Bar Overlay (Clean, Minimal, Zero Emojis) -->
-        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none z-10">
+        <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between z-10">
           <!-- Real-time Scene Badge synced to video time -->
-          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-200 shadow-lg">
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/10 text-xs font-mono text-zinc-200 shadow-lg pointer-events-none">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -107,11 +110,16 @@
             <span id="season-label" class="tracking-wide uppercase text-[11px] font-medium text-zinc-300">봄 · 아침</span>
           </div>
 
-          <!-- Studio Indicator -->
-          <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/10 text-[11px] font-mono text-zinc-300">
-            <i data-lucide="video" class="w-3.5 h-3.5 text-zinc-400"></i>
-            <span class="tracking-wider text-[10px]">3D STUDIO LIVE</span>
-          </div>
+          <!-- Calm BGM Sound Controller Button -->
+          <button 
+            id="sound-toggle"
+            onclick="toggleSound()" 
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-white/15 text-[11px] font-mono text-zinc-300 hover:text-white hover:bg-white/[0.12] transition shadow-lg group cursor-pointer"
+            title="잔잔한 배경음악 켜기/끄기"
+          >
+            <i id="sound-icon" data-lucide="volume-x" class="w-3.5 h-3.5 text-zinc-400 group-hover:text-white transition"></i>
+            <span id="sound-text" class="tracking-wider text-[10px]">BGM 켜기</span>
+          </button>
         </div>
 
         <!-- Subtle Minimal Progress Line at bottom -->
@@ -122,7 +130,7 @@
             <div id="dot-2" class="h-1 rounded-full bg-white/25 transition-all duration-500 w-2"></div>
             <div id="dot-3" class="h-1 rounded-full bg-white/25 transition-all duration-500 w-2"></div>
           </div>
-          <span class="text-[10px] font-mono text-zinc-400 tracking-wider">SEASON LOOP</span>
+          <span class="text-[10px] font-mono text-zinc-400 tracking-wider">3D STUDIO LIVE</span>
         </div>
       </div>
 
@@ -236,7 +244,7 @@
       </a>
 
 
-      <!-- PROJECT 2: 클린견적 (Pure Navy Star Squircle with Deep Sky Glow) -->
+      <!-- PROJECT 2: 클린견적 (Pure Crisp Vector Star Logo - No Outer Border) -->
       <a 
         href="https://starcatcher.today" 
         target="_blank" 
@@ -248,8 +256,9 @@
             <!-- Logo with Ambient Sky Blue Backlight Glow -->
             <div class="relative shrink-0">
               <div class="absolute -inset-1 rounded-2xl bg-sky-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              <div class="relative w-11 h-11 rounded-xl overflow-hidden border border-white/10 shrink-0 group-hover:border-sky-400/50 transition shadow-lg">
-                <img src="images/icon_cleanquote.png" alt="클린견적 로고" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              <div class="relative w-11 h-11 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-200 shadow-lg">
+                <!-- Pure Vector SVG Squircle + White Star -->
+                <img src="images/icon_cleanquote.svg" alt="클린견적 로고" class="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -278,7 +287,7 @@
       </a>
 
 
-      <!-- PROJECT 3: 사운드커버 (Clean Purple Squircle with Violet Glow) -->
+      <!-- PROJECT 3: 사운드커버 (Razor-Sharp Vector Icon - 100% Crisp) -->
       <a 
         href="https://soundcover.shop" 
         target="_blank" 
@@ -290,8 +299,9 @@
             <!-- Logo with Ambient Violet Backlight Glow -->
             <div class="relative shrink-0">
               <div class="absolute -inset-1 rounded-2xl bg-purple-500/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              <div class="relative w-11 h-11 rounded-xl overflow-hidden border border-white/10 shrink-0 group-hover:border-purple-400/50 transition shadow-lg">
-                <img src="images/icon_soundcover.png" alt="사운드커버 아이콘" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              <div class="relative w-11 h-11 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-200 shadow-lg">
+                <!-- Pure Vector SVG Toilet + Amber Mute Icon -->
+                <img src="images/icon_soundcover.svg" alt="사운드커버 아이콘" class="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -320,7 +330,7 @@
       </a>
 
 
-      <!-- PROJECT 4: 말랑이 D-Day (Clean Slime Mascot with Emerald/Mint Glow) -->
+      <!-- PROJECT 4: 말랑이 D-Day (Pure Slime Mascot Cutout on Dark Emerald Squircle) -->
       <a 
         href="https://slime-countdown.netlify.app/" 
         target="_blank" 
@@ -332,8 +342,9 @@
             <!-- Logo with Ambient Mint/Emerald Backlight Glow -->
             <div class="relative shrink-0">
               <div class="absolute -inset-1 rounded-2xl bg-emerald-400/25 blur-md opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
-              <div class="relative w-12 h-12 rounded-xl overflow-hidden border border-white/10 shrink-0 group-hover:border-emerald-400/50 transition shadow-lg">
-                <img src="images/icon_malang_dday.png" alt="말랑이 D-Day 아이콘" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              <!-- Dark Emerald Squircle with Cutout Slime Inside -->
+              <div class="relative w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-950/80 to-[#0e241c] border border-emerald-500/30 flex items-center justify-center shrink-0 group-hover:border-emerald-400/60 transition shadow-inner p-1">
+                <img src="images/icon_malang_slime_clean.png" alt="말랑이 D-Day 캐릭터" class="w-10 h-10 object-contain drop-shadow-[0_2px_8px_rgba(52,211,153,0.35)] group-hover:scale-110 transition-transform duration-200" />
               </div>
             </div>
 
@@ -434,8 +445,33 @@
         }
       });
 
-      // Ensure autoplay kicks in on mobile/desktop
       video.play().catch(() => {});
+    }
+
+    // Calm Ambient BGM Audio Controller
+    let isBgmPlaying = false;
+    const bgm = document.getElementById('bgm');
+    const soundIcon = document.getElementById('sound-icon');
+    const soundText = document.getElementById('sound-text');
+
+    function toggleSound() {
+      if (!isBgmPlaying) {
+        bgm.volume = 0.35;
+        bgm.play().then(() => {
+          isBgmPlaying = true;
+          soundIcon.setAttribute('data-lucide', 'volume-2');
+          soundText.innerText = 'BGM ON';
+          lucide.createIcons();
+        }).catch(err => {
+          console.log('Audio autoplay prevented:', err);
+        });
+      } else {
+        bgm.pause();
+        isBgmPlaying = false;
+        soundIcon.setAttribute('data-lucide', 'volume-x');
+        soundText.innerText = 'BGM 켜기';
+        lucide.createIcons();
+      }
     }
 
     // Email Copy
