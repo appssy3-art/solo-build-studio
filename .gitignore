@@ -14,10 +14,35 @@ Thumbs.db
 
 # Temporary rendering cache work directories
 shorts_final/_work/
-renders_shorts_9x16/preview/
+renders_shorts_9x16/
+renders_seasons/
+seasons_preview/
 scratch/**/*.png
 scratch/*.png
 scratch/seasonal_tests*/
 scratch/test_stair_fix/
 qa_540p_*.png
-seasons_preview/
+
+# Intermediate debug renders and binary drafts
+debug_*.jpg
+hub_frame*.jpg
+thumb_*.jpg
+scratch_*.jpg
+temp_*.wav
+temp_*.mp3
+cleanquote_*.png
+crop_*.png
+sb_*.png
+solo_build_*.png
+solo_build_*.mp4
+rainbow_sphere_360.mp4
+dreamy_rainbow_sky_bg.jpg
+soundcover_box.png
+
+# Raw intermediate videos in hub (keep solo_build_seasons_web.mp4)
+hub/videos/solo_build_deflicker.mp4
+hub/videos/solo_build_seasons_continuous.mp4
+hub/videos/solo_build_seasons_web_deflickered.mp4
+hub/videos/solo_build_smooth_60fps.mp4
+hub/videos/solo_build_summer_hero.mp4
+hub/videos/solo_build_timelapse_orbit.mp4
